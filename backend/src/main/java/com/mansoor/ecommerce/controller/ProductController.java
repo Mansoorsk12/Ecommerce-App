@@ -3,7 +3,7 @@ import com.mansoor.ecommerce.model.Product;
 import com.mansoor.ecommerce.repository.ProductRepository;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
-@RestController @RequestMapping("/api/products") @CrossOrigin(origins="http://localhost:5173")
+@RestController @RequestMapping("/api/products") @CrossOrigin(origins = "*")
 public class ProductController {
   private final ProductRepository repo; public ProductController(ProductRepository repo){this.repo=repo;}
   @GetMapping public List<Product> all(@RequestParam(required=false) String search,@RequestParam(required=false) String category){

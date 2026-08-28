@@ -1,5 +1,5 @@
 import React,{useEffect,useMemo,useState} from 'react'; import {createRoot} from 'react-dom/client'; import axios from 'axios'; import './style.css';
-const API='http://localhost:8080/api';
+const API = import.meta.env.VITE_API_URL || 'http://localhost:8080/api';
 function App(){const [products,setProducts]=useState([]),[cart,setCart]=useState(()=>JSON.parse(localStorage.getItem('cart')||'[]')),[search,setSearch]=useState(''),[cat,setCat]=useState('All'),[loading,setLoading]=useState(true),[showCart,setShowCart]=useState(false),[message,setMessage]=useState('');
 const load=async()=>{setLoading(true);try{const r=await axios.get(`${API}/products`,{params:{search,category:cat}});setProducts(r.data)}finally{setLoading(false)}};useEffect(()=>{load()},[search,cat]);useEffect(()=>localStorage.setItem('cart',JSON.stringify(cart)),[cart]);
 const categories=['All','Electronics','Accessories','Wearables']; const total=useMemo(()=>cart.reduce((s,x)=>s+x.price*x.qty,0),[cart]);

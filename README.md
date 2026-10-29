@@ -16,21 +16,7 @@ A resume-ready upgrade of the original Java console e-commerce project into a we
 - REST API for product CRUD
 - Responsive modern UI
 
-## Run locally
-### Backend
-```bash
-cd backend
-mvn spring-boot:run
-```
-Backend: http://localhost:8080
 
-### Frontend
-```bash
-cd frontend
-npm install
-npm run dev
-```
-Frontend: http://localhost:5173
 
 ## MySQL
 Use the `mysql` Spring profile after creating/configuring MySQL:

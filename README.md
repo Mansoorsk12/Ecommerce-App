@@ -1,4 +1,4 @@
-# Mansoor Mart — Full Stack E-Commerce App
+# Mart — Full Stack E-Commerce App
 
 A resume-ready upgrade of the original Java console e-commerce project into a web application.
 

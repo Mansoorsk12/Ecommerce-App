@@ -5,7 +5,7 @@ A resume-ready upgrade of the original Java console e-commerce project into a we
 ## Stack
 - Frontend: React + Vite + Axios
 - Backend: Java 17 + Spring Boot + Spring Data JPA
-- Database: H2 for zero-setup local demo; MySQL profile included for production-style setup
+
 
 ## Features
 - Product catalog with seeded products
